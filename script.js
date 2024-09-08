@@ -9,7 +9,6 @@ const animeData = [...document.querySelectorAll('.btn-anime')].map(anime => {
         link: link
     };
 });
-
 console.table(animeData);
 
 
@@ -30,10 +29,10 @@ const sliderData = [...document.querySelectorAll('.widget-slide-block')].map(sli
         link: link
     };
 });
-
-//Return top 50 anime
 console.table(sliderData);
 
+
+//Return top 50 anime
 const rankingData = [...document.querySelectorAll('.ranking-list')].map(rankingItem => {
     const titleElement = rankingItem.querySelector('.anime_ranking_h3 a');
     const title = titleElement ? titleElement.innerText.trim() : 'No title available';
