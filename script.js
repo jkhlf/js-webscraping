@@ -12,6 +12,28 @@ const animeData = [...document.querySelectorAll('.btn-anime')].map(anime => {
 console.table(animeData);
 
 
+//Return Forum Titles and Links the Topics
+function getForumData() {
+    const forumBoardTitles = [...document.querySelectorAll('.forum-board-title')].map(element => {
+        return {
+            title: element.innerText.trim()
+        };
+    });
+
+    const topicLinks = [...document.querySelectorAll('.topic-title-link')].map(element => {
+        return {
+            link: element.href
+        };
+    });
+
+    console.log('Forum Board Titles:');
+    console.table(forumBoardTitles);
+
+    console.log('Topic Links:');
+    console.table(topicLinks);
+}
+
+getForumData();
 
 //Return top 50 anime
 const rankingData = [...document.querySelectorAll('.ranking-list')].map(rankingItem => {
