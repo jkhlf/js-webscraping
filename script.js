@@ -1,35 +1,16 @@
+//Funcionando no FireFox
 
+
+
+//Classe anime-btn, todos os cards da home
 const animeData = [...document.querySelectorAll('.btn-anime')].map(anime => {
     const title = anime.innerText.trim();
-
-    const link = anime.href ? anime.href : 'No link available';
-
     return {
         title: title,
-        link: link
     };
 });
 console.table(animeData);
 
-
-
-const sliderData = [...document.querySelectorAll('.widget-slide-block')].map(slide => {
-    const titleElement = slide.querySelector('.title'); 
-    const title = titleElement ? titleElement.innerText.trim() : 'No title available';
-
-    const imgElement = slide.querySelector('img');
-    const imageUrl = imgElement ? imgElement.src : 'No image available';
-
-    const linkElement = slide.querySelector('a');
-    const link = linkElement ? linkElement.href : 'No link available';
-
-    return {
-        title: title,
-        image: imageUrl,
-        link: link
-    };
-});
-console.table(sliderData);
 
 
 //Return top 50 anime
