@@ -2,7 +2,7 @@
 
 
 
-//Classe anime-btn, todos os cards da home
+//Class anime-btn, all cards in homepage
 const animeData = [...document.querySelectorAll('.btn-anime')].map(anime => {
     const title = anime.innerText.trim();
     return {
